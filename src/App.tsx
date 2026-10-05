@@ -18,7 +18,7 @@ export default function App() {
   const [isDayPassOpen, setIsDayPassOpen] = useState(false);
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
   const [isSaved, setIsSaved] = useState<boolean>(() => {
-    return localStorage.getItem('golds_venice_saved') === 'true';
+    return localStorage.getItem('planet_fitness_hampton_saved') === 'true';
   });
   const [sharedToast, setSharedToast] = useState(false);
   const [saveToast, setSaveToast] = useState<string | null>(null);
@@ -27,15 +27,15 @@ export default function App() {
   const handleToggleSave = () => {
     const next = !isSaved;
     setIsSaved(next);
-    localStorage.setItem('golds_venice_saved', String(next));
-    setSaveToast(next ? "Saved Gold's Gym Venice to your bookmarks" : "Removed from bookmarks");
+    localStorage.setItem('planet_fitness_hampton_saved', String(next));
+    setSaveToast(next ? "Saved Planet Fitness Hampton to your clubs" : "Removed from your clubs");
     setTimeout(() => setSaveToast(null), 2500);
   };
 
   const handleShare = async () => {
     const shareData = {
-      title: "Gold's Gym Venice - The Mecca of Bodybuilding",
-      text: "Legendary bodybuilding gym featuring extensive strength training equipment and an outdoor workout area. 360 Hampton Dr, Venice, CA.",
+      title: "Planet Fitness - Hampton, NH | Judgement Free Zone®",
+      text: "Large low-cost fitness chain with many locations across the U.S. Located at 4 Liberty Lane West, Hampton, NH 03842.",
       url: window.location.href
     };
 

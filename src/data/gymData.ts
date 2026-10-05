@@ -15,7 +15,7 @@ export interface ServiceItem {
   tagline: string;
   description: string;
   highlights: string[];
-  category: 'strength' | 'performance' | 'tech' | 'amenity';
+  category: 'cardio-strength' | 'spa-recovery' | 'coaching' | 'amenity';
 }
 
 export interface PopularTimeHour {
@@ -45,106 +45,114 @@ export interface VideoClip {
 }
 
 export const GYM_INFO = {
-  name: "Gold's Gym Venice",
-  nickname: "The Mecca of Bodybuilding",
+  name: "Planet Fitness",
+  nickname: "The Judgement Free Zone®",
+  tagline: "Large low-cost fitness chain with many locations across the U.S.",
   rating: 4.4,
   reviewCount: 1524,
-  category: "Gym",
-  address: "360 Hampton Dr, Venice, CA 90291, United States",
-  street: "360 Hampton Dr",
-  city: "Venice, CA 90291",
+  category: "Fitness Club & Gym",
+  address: "4 Liberty Lane West, Hampton, NH 03842",
+  street: "4 Liberty Lane West",
+  city: "Hampton, NH 03842",
+  state: "New Hampshire",
   country: "United States",
-  phone: "+1 310-392-6004",
-  phoneClean: "+13103926004",
-  status: "Closed · Opens 5 am",
+  phone: "+1 603-750-0001",
+  phoneClean: "+16037500001",
+  telephone: "+1 603-750-0001",
+  telephoneClean: "+16037500001",
+  mobile: "+1 603-750-0002",
+  mobileClean: "+16037500002",
+  email: "investor@planetfitness.com",
+  status: "Open 24 Hours · Welcoming All Fitness Levels",
   standardHours: [
-    { day: "Monday", hours: "5:00 AM – 11:00 PM" },
-    { day: "Tuesday", hours: "5:00 AM – 11:00 PM" },
-    { day: "Wednesday", hours: "5:00 AM – 11:00 PM" },
-    { day: "Thursday", hours: "5:00 AM – 11:00 PM" },
-    { day: "Friday", hours: "5:00 AM – 11:00 PM" },
-    { day: "Saturday", hours: "7:00 AM – 9:00 PM" },
-    { day: "Sunday", hours: "7:00 AM – 9:00 PM" }
+    { day: "Monday", hours: "Open 24 Hours (from 5:00 AM)" },
+    { day: "Tuesday", hours: "Open 24 Hours" },
+    { day: "Wednesday", hours: "Open 24 Hours" },
+    { day: "Thursday", hours: "Open 24 Hours" },
+    { day: "Friday", hours: "Open until 10:00 PM" },
+    { day: "Saturday", hours: "7:00 AM – 7:00 PM" },
+    { day: "Sunday", hours: "7:00 AM – 7:00 PM" }
   ],
-  description: "Legendary bodybuilding gym featuring extensive strength training equipment and an outdoor workout area.",
-  peakHourDescription: "5 PM: Usually as busy as it gets",
-  dwellTimeDescription: "People typically spend 1-2 hours here",
-  entryPassPrice: 50,
-  googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Gold's+Gym+Venice+360+Hampton+Dr+Venice+CA"
+  description: "Large low-cost fitness chain with many locations across the U.S. Clean, spacious workout environment with tons of cardio, strength equipment, Black Card Spa®, and certified fitness training.",
+  peakHourDescription: "5 PM: Usually as busy as it gets (Check the PF Crowd Meter)",
+  dwellTimeDescription: "Members typically spend 45-90 minutes here",
+  entryPassPrice: 10,
+  blackCardPrice: 24.99,
+  googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Planet+Fitness+4+Liberty+Lane+West+Hampton+NH+03842"
 };
 
 export const SERVICES: ServiceItem[] = [
   {
-    id: "personal-training",
-    name: "Personal Training",
-    tagline: "World-Class Pro Coaching",
-    description: "Work one-on-one with elite IFBB pros, CSCS strength coaches, and master trainers tailored for hypertrophy, athletic conditioning, and competition prep.",
-    highlights: ["Custom biomechanical periodization", "Body composition tracking", "Olympic and powerlifting mechanics"],
-    category: "strength"
+    id: "pe-pf-training",
+    name: "Free Fitness Training (PE@PF)",
+    tagline: "Certified Trainer Sessions Included",
+    description: "Every membership includes free, small-group fitness sessions led by certified trainers. Learn equipment setup, design custom workout plans, and stay accountable.",
+    highlights: ["Orientation & machine guidance", "Targeted core and upper/lower body classes", "Zero added cost with any membership"],
+    category: "coaching"
   },
   {
-    id: "group-exercise",
-    name: "Group Exercise",
-    tagline: "High-Energy Athletic Classes",
-    description: "Energetic instructor-led sessions covering strength circuits, mobility work, core conditioning, and functional hypertrophy.",
-    highlights: ["Multiple daily time slots", "All fitness levels welcome", "Championship energy and music"],
-    category: "performance"
+    id: "express-30-circuit",
+    name: "30-Minute Express Circuit",
+    tagline: "Full-Body Strength & Cardio Combo",
+    description: "A timed 10-station strength and 10-step cardio circuit with traffic-light pacing (red light / green light) that delivers a full-body workout in just 30 minutes.",
+    highlights: ["Red/green indicator light system", "Cardio steps alternating with hydraulic strength", "Quick in-and-out complete workout"],
+    category: "cardio-strength"
   },
   {
-    id: "group-cycle",
-    name: "Group Cycle",
-    tagline: "Power & Cadence Studio",
-    description: "High-intensity studio cycling utilizing magnetic resistance bikes, heart rate metrics, and endurance climbing stages.",
-    highlights: ["State-of-the-art Keiser bikes", "Performance tracking console", "High-cadence interval intervals"],
-    category: "performance"
-  },
-  {
-    id: "golds-3d",
-    name: "GOLD'S 3D",
-    tagline: "Precision Body Scanning",
-    description: "Cutting-edge 3D full-body scanners creating an exact volumetric avatar, measuring lean muscle mass, postural symmetry, and fat distribution in 35 seconds.",
-    highlights: ["Sub-millimeter circumference tracking", "Lean tissue vs fat analysis", "Visual body composition overlay"],
-    category: "tech"
-  },
-  {
-    id: "golds-amp",
-    name: "GOLD'S AMP",
-    tagline: "Digital Audio Coaching & Tracking",
-    description: "Custom digital fitness platform with guided audio workouts, heart rate telemetry, curated training playlists, and workout logging.",
-    highlights: ["Over 1,000 guided audio workouts", "BPM-synchronized workout music", "Cross-session progress analytics"],
-    category: "tech"
-  },
-  {
-    id: "bootcamp",
-    name: "BOOTCAMP",
-    tagline: "Venice Beach Athletic Conditioning",
-    description: "Intense, military-inspired functional conditioning combining outdoor sandbag carries, sled pushes, kettlebells, and bodyweight intervals.",
-    highlights: ["Indoor and outdoor yard rotations", "Metabolic conditioning circuits", "Team camaraderie"],
-    category: "performance"
-  },
-  {
-    id: "locker-rooms",
-    name: "Locker Rooms & Saunas",
-    tagline: "Full Amenity Recovery Zone",
-    description: "Spacious executive locker rooms equipped with private showers, cedarwood dry saunas, digital lockers, clean restrooms, and vanity stations.",
-    highlights: ["Shower & Restroom amenities", "Dry cedar sauna", "Towel service & grooming essentials"],
-    category: "amenity"
+    id: "black-card-spa",
+    name: "PF Black Card Spa®",
+    tagline: "Premium Relaxation & Recovery",
+    description: "Exclusive to PF Black Card® members. Enjoy therapeutic HydroMassage® water beds, Total Body Enhancement red light booths, and zero-gravity massage loungers.",
+    highlights: ["HydroMassage® heated water jet beds", "Total Body Enhancement Beauty Angel booth", "Relaxation massage chairs"],
+    category: "spa-recovery"
   },
   {
     id: "cardio-equipment",
-    name: "Cardio Equipment",
-    tagline: "Cardio Mezzanine & Ocean Breeze",
-    description: "Expansive cardio deck featuring StairMasters, Woodway curved treadmills, Concept2 rowers, ski ergs, and elliptical trainers with personal media.",
-    highlights: ["Woodway non-motorized treadmills", "StairMaster Gauntlet rows", "Heart rate telemetry sync"],
-    category: "performance"
+    name: "Massive Cardio Floor",
+    tagline: "Never Wait for a Treadmill",
+    description: "Hundreds of cardio machines equipped with personal TV monitors and heart rate grips: treadmills, ellipticals, Arc trainers, stair climbers, and stationary bikes.",
+    highlights: ["Individual TV screens and audio sync", "Treadmills, rowers, and recumbent bikes", "High-ceiling air filtration"],
+    category: "cardio-strength"
   },
   {
-    id: "resistance-free-weights",
-    name: "Resistance Machines & Free Weights",
-    tagline: "The Mecca Heavy Iron Pit",
-    description: "The world's most comprehensive collection of heavy free weights with dumbbells up to 300 lbs, competition bench presses, squat racks, and rare vintage leverage machines.",
-    highlights: ["Dumbbells up to 300 lbs", "Rogers Athletic & Arsenal Strength racks", "Outdoor covered yard stations"],
-    category: "strength"
+    id: "strength-free-weights",
+    name: "Strength Machines & Dumbbells",
+    tagline: "User-Friendly Guided Resistance",
+    description: "Full circuit of pin-selectorized Matrix and Life Fitness machines with easy instructional diagrams, plus a dedicated dumbbell area ranging up to 75 lbs.",
+    highlights: ["Selectorized weight stacks with diagram guides", "Dumbbells up to 75 lbs with benches", "Smith machines & cable towers"],
+    category: "cardio-strength"
+  },
+  {
+    id: "pf-crowd-meter",
+    name: "PF Crowd Meter & App",
+    tagline: "Live Capacity & Mobile Workouts",
+    description: "Check live club busyness before leaving home using the official PF App Crowd Meter. Access hundreds of on-demand digital workouts and track your visits.",
+    highlights: ["Real-time club crowd capacity meter", "Hundreds of trainer-led digital videos", "Keyless digital barcode check-in"],
+    category: "amenity"
+  },
+  {
+    id: "bring-a-guest",
+    name: "Bring a Guest Anytime",
+    tagline: "Unlimited Black Card® Guest Privileges",
+    description: "Black Card® members can bring any workout buddy with them every single visit at no extra charge. Work out together whenever you want.",
+    highlights: ["Unlimited guest visits", "Guest access to entire gym floor", "Easy guest mobile check-in"],
+    category: "amenity"
+  },
+  {
+    id: "locker-rooms",
+    name: "Spotless Locker Rooms & Showers",
+    tagline: "Always Clean & Fresh",
+    description: "Immaculate day-use lockers, private showers with hot water, clean restrooms, full-length dressing mirrors, and blow-dryer vanity stations.",
+    highlights: ["Private shower stalls with changing nooks", "Spacious day-use lockers", "Restrooms disinfected round-the-clock"],
+    category: "amenity"
+  },
+  {
+    id: "beverage-perks",
+    name: "Drink Perks & Nationwide Access",
+    tagline: "Use Any of 2,500+ Clubs Across U.S.",
+    description: "Black Card® members receive 50% off select cold bottled drinks and can use any Planet Fitness location across all 50 states and international clubs.",
+    highlights: ["Access to 2,500+ locations nationwide", "50% off select cooler beverages", "Partner discounts (Reebok, hotel perks)"],
+    category: "spa-recovery"
   }
 ];
 
@@ -153,160 +161,158 @@ export const POPULAR_TIMES_DATA: Record<string, { label: string; peak: string; h
     label: "Monday",
     peak: "5 PM",
     hours: [
-      { hour: 5, label: "5 AM", busyness: 25 },
-      { hour: 6, label: "6 AM", busyness: 45 },
-      { hour: 7, label: "7 AM", busyness: 60 },
-      { hour: 8, label: "8 AM", busyness: 55 },
-      { hour: 9, label: "9 AM", busyness: 50 },
-      { hour: 10, label: "10 AM", busyness: 52 },
-      { hour: 11, label: "11 AM", busyness: 58 },
-      { hour: 12, label: "12 PM", busyness: 68 },
-      { hour: 13, label: "1 PM", busyness: 62 },
-      { hour: 14, label: "2 PM", busyness: 60 },
-      { hour: 15, label: "3 PM", busyness: 72 },
-      { hour: 16, label: "4 PM", busyness: 88 },
-      { hour: 17, label: "5 PM", busyness: 100, statusText: "Usually as busy as it gets" },
-      { hour: 18, label: "6 PM", busyness: 95 },
-      { hour: 19, label: "7 PM", busyness: 80 },
-      { hour: 20, label: "8 PM", busyness: 62 },
-      { hour: 21, label: "9 PM", busyness: 40 },
-      { hour: 22, label: "10 PM", busyness: 20 }
+      { hour: 5, label: "5 AM", busyness: 22 },
+      { hour: 6, label: "6 AM", busyness: 42 },
+      { hour: 7, label: "7 AM", busyness: 52 },
+      { hour: 8, label: "8 AM", busyness: 48 },
+      { hour: 9, label: "9 AM", busyness: 44 },
+      { hour: 10, label: "10 AM", busyness: 46 },
+      { hour: 11, label: "11 AM", busyness: 52 },
+      { hour: 12, label: "12 PM", busyness: 60 },
+      { hour: 13, label: "1 PM", busyness: 54 },
+      { hour: 14, label: "2 PM", busyness: 50 },
+      { hour: 15, label: "3 PM", busyness: 64 },
+      { hour: 16, label: "4 PM", busyness: 82 },
+      { hour: 17, label: "5 PM", busyness: 96, statusText: "Usually as busy as it gets" },
+      { hour: 18, label: "6 PM", busyness: 88 },
+      { hour: 19, label: "7 PM", busyness: 72 },
+      { hour: 20, label: "8 PM", busyness: 54 },
+      { hour: 21, label: "9 PM", busyness: 36 },
+      { hour: 22, label: "10 PM", busyness: 18 }
     ]
   },
   Tue: {
     label: "Tuesday",
     peak: "5 PM",
     hours: [
-      { hour: 5, label: "5 AM", busyness: 28 },
-      { hour: 6, label: "6 AM", busyness: 48 },
-      { hour: 7, label: "7 AM", busyness: 62 },
-      { hour: 8, label: "8 AM", busyness: 56 },
-      { hour: 9, label: "9 AM", busyness: 51 },
-      { hour: 10, label: "10 AM", busyness: 54 },
-      { hour: 11, label: "11 AM", busyness: 60 },
-      { hour: 12, label: "12 PM", busyness: 70 },
-      { hour: 13, label: "1 PM", busyness: 64 },
-      { hour: 14, label: "2 PM", busyness: 62 },
-      { hour: 15, label: "3 PM", busyness: 74 },
-      { hour: 16, label: "4 PM", busyness: 86 },
-      { hour: 17, label: "5 PM", busyness: 98, statusText: "Usually as busy as it gets" },
-      { hour: 18, label: "6 PM", busyness: 92 },
-      { hour: 19, label: "7 PM", busyness: 78 },
-      { hour: 20, label: "8 PM", busyness: 58 },
-      { hour: 21, label: "9 PM", busyness: 38 },
-      { hour: 22, label: "10 PM", busyness: 18 }
+      { hour: 5, label: "5 AM", busyness: 24 },
+      { hour: 6, label: "6 AM", busyness: 44 },
+      { hour: 7, label: "7 AM", busyness: 54 },
+      { hour: 8, label: "8 AM", busyness: 48 },
+      { hour: 9, label: "9 AM", busyness: 45 },
+      { hour: 10, label: "10 AM", busyness: 47 },
+      { hour: 11, label: "11 AM", busyness: 53 },
+      { hour: 12, label: "12 PM", busyness: 62 },
+      { hour: 13, label: "1 PM", busyness: 55 },
+      { hour: 14, label: "2 PM", busyness: 52 },
+      { hour: 15, label: "3 PM", busyness: 66 },
+      { hour: 16, label: "4 PM", busyness: 84 },
+      { hour: 17, label: "5 PM", busyness: 95, statusText: "Usually as busy as it gets" },
+      { hour: 18, label: "6 PM", busyness: 86 },
+      { hour: 19, label: "7 PM", busyness: 70 },
+      { hour: 20, label: "8 PM", busyness: 52 },
+      { hour: 21, label: "9 PM", busyness: 34 },
+      { hour: 22, label: "10 PM", busyness: 16 }
     ]
   },
   Wed: {
     label: "Wednesday",
     peak: "5 PM",
     hours: [
-      { hour: 5, label: "5 AM", busyness: 30 },
-      { hour: 6, label: "6 AM", busyness: 50 },
-      { hour: 7, label: "7 AM", busyness: 64 },
-      { hour: 8, label: "8 AM", busyness: 58 },
-      { hour: 9, label: "9 AM", busyness: 53 },
-      { hour: 10, label: "10 AM", busyness: 55 },
-      { hour: 11, label: "11 AM", busyness: 62 },
-      { hour: 12, label: "12 PM", busyness: 72 },
-      { hour: 13, label: "1 PM", busyness: 66 },
-      { hour: 14, label: "2 PM", busyness: 65 },
-      { hour: 15, label: "3 PM", busyness: 78 },
-      { hour: 16, label: "4 PM", busyness: 90 },
-      { hour: 17, label: "5 PM", busyness: 100, statusText: "Usually as busy as it gets" },
-      { hour: 18, label: "6 PM", busyness: 94 },
-      { hour: 19, label: "7 PM", busyness: 82 },
-      { hour: 20, label: "8 PM", busyness: 60 },
-      { hour: 21, label: "9 PM", busyness: 39 },
-      { hour: 22, label: "10 PM", busyness: 19 }
+      { hour: 5, label: "5 AM", busyness: 26 },
+      { hour: 6, label: "6 AM", busyness: 46 },
+      { hour: 7, label: "7 AM", busyness: 56 },
+      { hour: 8, label: "8 AM", busyness: 50 },
+      { hour: 9, label: "9 AM", busyness: 46 },
+      { hour: 10, label: "10 AM", busyness: 48 },
+      { hour: 11, label: "11 AM", busyness: 55 },
+      { hour: 12, label: "12 PM", busyness: 64 },
+      { hour: 13, label: "1 PM", busyness: 57 },
+      { hour: 14, label: "2 PM", busyness: 54 },
+      { hour: 15, label: "3 PM", busyness: 68 },
+      { hour: 16, label: "4 PM", busyness: 86 },
+      { hour: 17, label: "5 PM", busyness: 98, statusText: "Usually as busy as it gets" },
+      { hour: 18, label: "6 PM", busyness: 88 },
+      { hour: 19, label: "7 PM", busyness: 72 },
+      { hour: 20, label: "8 PM", busyness: 54 },
+      { hour: 21, label: "9 PM", busyness: 35 },
+      { hour: 22, label: "10 PM", busyness: 17 }
     ]
   },
   Thu: {
     label: "Thursday",
     peak: "5 PM",
     hours: [
-      { hour: 5, label: "5 AM", busyness: 26 },
-      { hour: 6, label: "6 AM", busyness: 46 },
-      { hour: 7, label: "7 AM", busyness: 60 },
-      { hour: 8, label: "8 AM", busyness: 54 },
-      { hour: 9, label: "9 AM", busyness: 50 },
-      { hour: 10, label: "10 AM", busyness: 52 },
-      { hour: 11, label: "11 AM", busyness: 59 },
-      { hour: 12, label: "12 PM", busyness: 69 },
-      { hour: 13, label: "1 PM", busyness: 63 },
-      { hour: 14, label: "2 PM", busyness: 61 },
-      { hour: 15, label: "3 PM", busyness: 73 },
-      { hour: 16, label: "4 PM", busyness: 87 },
-      { hour: 17, label: "5 PM", busyness: 97, statusText: "Usually as busy as it gets" },
-      { hour: 18, label: "6 PM", busyness: 90 },
-      { hour: 19, label: "7 PM", busyness: 76 },
-      { hour: 20, label: "8 PM", busyness: 56 },
-      { hour: 21, label: "9 PM", busyness: 36 },
-      { hour: 22, label: "10 PM", busyness: 18 }
+      { hour: 5, label: "5 AM", busyness: 23 },
+      { hour: 6, label: "6 AM", busyness: 43 },
+      { hour: 7, label: "7 AM", busyness: 53 },
+      { hour: 8, label: "8 AM", busyness: 47 },
+      { hour: 9, label: "9 AM", busyness: 44 },
+      { hour: 10, label: "10 AM", busyness: 46 },
+      { hour: 11, label: "11 AM", busyness: 52 },
+      { hour: 12, label: "12 PM", busyness: 61 },
+      { hour: 13, label: "1 PM", busyness: 54 },
+      { hour: 14, label: "2 PM", busyness: 51 },
+      { hour: 15, label: "3 PM", busyness: 65 },
+      { hour: 16, label: "4 PM", busyness: 83 },
+      { hour: 17, label: "5 PM", busyness: 94, statusText: "Usually as busy as it gets" },
+      { hour: 18, label: "6 PM", busyness: 84 },
+      { hour: 19, label: "7 PM", busyness: 68 },
+      { hour: 20, label: "8 PM", busyness: 50 },
+      { hour: 21, label: "9 PM", busyness: 32 },
+      { hour: 22, label: "10 PM", busyness: 16 }
     ]
   },
   Fri: {
     label: "Friday",
     peak: "4 PM",
     hours: [
-      { hour: 5, label: "5 AM", busyness: 25 },
-      { hour: 6, label: "6 AM", busyness: 44 },
-      { hour: 7, label: "7 AM", busyness: 58 },
-      { hour: 8, label: "8 AM", busyness: 52 },
-      { hour: 9, label: "9 AM", busyness: 49 },
-      { hour: 10, label: "10 AM", busyness: 53 },
-      { hour: 11, label: "11 AM", busyness: 64 },
-      { hour: 12, label: "12 PM", busyness: 75 },
-      { hour: 13, label: "1 PM", busyness: 72 },
-      { hour: 14, label: "2 PM", busyness: 70 },
-      { hour: 15, label: "3 PM", busyness: 82 },
-      { hour: 16, label: "4 PM", busyness: 92, statusText: "Busy heading into the weekend" },
-      { hour: 17, label: "5 PM", busyness: 88 },
-      { hour: 18, label: "6 PM", busyness: 75 },
-      { hour: 19, label: "7 PM", busyness: 62 },
-      { hour: 20, label: "8 PM", busyness: 46 },
-      { hour: 21, label: "9 PM", busyness: 30 },
-      { hour: 22, label: "10 PM", busyness: 15 }
+      { hour: 5, label: "5 AM", busyness: 22 },
+      { hour: 6, label: "6 AM", busyness: 40 },
+      { hour: 7, label: "7 AM", busyness: 50 },
+      { hour: 8, label: "8 AM", busyness: 44 },
+      { hour: 9, label: "9 AM", busyness: 42 },
+      { hour: 10, label: "10 AM", busyness: 45 },
+      { hour: 11, label: "11 AM", busyness: 56 },
+      { hour: 12, label: "12 PM", busyness: 65 },
+      { hour: 13, label: "1 PM", busyness: 60 },
+      { hour: 14, label: "2 PM", busyness: 58 },
+      { hour: 15, label: "3 PM", busyness: 72 },
+      { hour: 16, label: "4 PM", busyness: 82, statusText: "Busy heading into weekend" },
+      { hour: 17, label: "5 PM", busyness: 78 },
+      { hour: 18, label: "6 PM", busyness: 65 },
+      { hour: 19, label: "7 PM", busyness: 52 },
+      { hour: 20, label: "8 PM", busyness: 38 },
+      { hour: 21, label: "9 PM", busyness: 24 },
+      { hour: 22, label: "10 PM", busyness: 14 }
     ]
   },
   Sat: {
     label: "Saturday",
-    peak: "11 AM",
-    hours: [
-      { hour: 7, label: "7 AM", busyness: 35 },
-      { hour: 8, label: "8 AM", busyness: 55 },
-      { hour: 9, label: "9 AM", busyness: 75 },
-      { hour: 10, label: "10 AM", busyness: 90 },
-      { hour: 11, label: "11 AM", busyness: 98, statusText: "Peak weekend morning energy" },
-      { hour: 12, label: "12 PM", busyness: 92 },
-      { hour: 13, label: "1 PM", busyness: 80 },
-      { hour: 14, label: "2 PM", busyness: 72 },
-      { hour: 15, label: "3 PM", busyness: 65 },
-      { hour: 16, label: "4 PM", busyness: 58 },
-      { hour: 17, label: "5 PM", busyness: 50 },
-      { hour: 18, label: "6 PM", busyness: 42 },
-      { hour: 19, label: "7 PM", busyness: 32 },
-      { hour: 20, label: "8 PM", busyness: 20 }
-    ]
-  },
-  Sun: {
-    label: "Sunday",
     peak: "10 AM",
     hours: [
       { hour: 7, label: "7 AM", busyness: 30 },
       { hour: 8, label: "8 AM", busyness: 50 },
-      { hour: 9, label: "9 AM", busyness: 72 },
-      { hour: 10, label: "10 AM", busyness: 92, statusText: "Sunday pump & outdoor yard" },
-      { hour: 11, label: "11 AM", busyness: 88 },
-      { hour: 12, label: "12 PM", busyness: 80 },
-      { hour: 13, label: "1 PM", busyness: 70 },
-      { hour: 14, label: "2 PM", busyness: 60 },
-      { hour: 15, label: "3 PM", busyness: 54 },
-      { hour: 16, label: "4 PM", busyness: 48 },
-      { hour: 17, label: "5 PM", busyness: 42 },
-      { hour: 18, label: "6 PM", busyness: 36 },
-      { hour: 19, label: "7 PM", busyness: 26 },
-      { hour: 20, label: "8 PM", busyness: 18 }
+      { hour: 9, label: "9 AM", busyness: 70 },
+      { hour: 10, label: "10 AM", busyness: 88, statusText: "Peak weekend morning" },
+      { hour: 11, label: "11 AM", busyness: 82 },
+      { hour: 12, label: "12 PM", busyness: 72 },
+      { hour: 13, label: "1 PM", busyness: 60 },
+      { hour: 14, label: "2 PM", busyness: 52 },
+      { hour: 15, label: "3 PM", busyness: 46 },
+      { hour: 16, label: "4 PM", busyness: 40 },
+      { hour: 17, label: "5 PM", busyness: 34 },
+      { hour: 18, label: "6 PM", busyness: 26 },
+      { hour: 19, label: "7 PM", busyness: 15 }
+    ]
+  },
+  Sun: {
+    label: "Sunday",
+    peak: "11 AM",
+    hours: [
+      { hour: 7, label: "7 AM", busyness: 25 },
+      { hour: 8, label: "8 AM", busyness: 44 },
+      { hour: 9, label: "9 AM", busyness: 65 },
+      { hour: 10, label: "10 AM", busyness: 82 },
+      { hour: 11, label: "11 AM", busyness: 86, statusText: "Sunday workout rush" },
+      { hour: 12, label: "12 PM", busyness: 75 },
+      { hour: 13, label: "1 PM", busyness: 62 },
+      { hour: 14, label: "2 PM", busyness: 50 },
+      { hour: 15, label: "3 PM", busyness: 44 },
+      { hour: 16, label: "4 PM", busyness: 38 },
+      { hour: 17, label: "5 PM", busyness: 32 },
+      { hour: 18, label: "6 PM", busyness: 24 },
+      { hour: 19, label: "7 PM", busyness: 14 }
     ]
   }
 };
@@ -314,46 +320,46 @@ export const POPULAR_TIMES_DATA: Record<string, { label: string; peak: string; h
 export const REVIEWS: Review[] = [
   {
     id: "rev-1",
-    author: "Marcus Vance",
+    author: "Jessica Miller",
     rating: 5,
     date: "1 week ago",
-    content: "Massive space inside and out, tons of equipment and weights, friendly staff. Truly the Mecca of bodybuilding. You feel the history the moment you step foot inside.",
+    content: "Massive space inside and out, tons of cardio machines and weights, friendly staff. Truly a judgement-free environment. Cleanest gym I've belonged to in New England.",
     likes: 42,
     verified: true
   },
   {
     id: "rev-2",
-    author: "Elena Rostova",
+    author: "Danielle Gagnon",
     rating: 5,
     date: "2 weeks ago",
-    content: "The people, the energy, and the overall vibe are genuinely great and motivating. Everyone is there to work hard, whether they are a pro or a dedicated lifter. The outdoor yard on a sunny day is unmatched.",
+    content: "The people, the energy, and the overall vibe are genuinely great and motivating. HydroMassage beds in the Black Card lounge are worth the membership alone!",
     likes: 38,
     verified: true
   },
   {
     id: "rev-3",
-    author: "David K.",
+    author: "Brendan Sullivan",
     rating: 4,
     date: "3 weeks ago",
-    content: "Ok as a gymrat you must go there but a 50$ ticket entry is a very salty price. Still, if you appreciate lifting history and want to train where legends were forged, it's worth doing at least once. Equipment selection is insane.",
+    content: "For a low-cost gym, you get an incredible amount of value. 30-minute circuit is super convenient on busy days, and the Hampton NH club is always spotless.",
     likes: 95,
     verified: true
   },
   {
     id: "rev-4",
-    author: "Terrence Hayes",
+    author: "Ashley Thompson",
     rating: 5,
     date: "a month ago",
-    content: "Dumbbells all the way up to 300 lbs! You literally won't find this anywhere else on earth. Staff was welcoming, locker room and showers were clean, and training outside under the Venice sun gave me the best pump of my life.",
+    content: "No intimidating lifters staring at you, lots of treadmills with personal TVs, and great shower facilities. The PF app crowd meter makes it so easy to plan visits.",
     likes: 27,
     verified: true
   },
   {
     id: "rev-5",
-    author: "Sophie Laurent",
+    author: "Michael R.",
     rating: 4,
     date: "2 months ago",
-    content: "Gold's 3D scanner session was super insightful for tracking body fat and symmetry changes. Clean restrooms, high ceiling airflow, and group cycling has high-energy music. Iconic spot.",
+    content: "Hampton club is great. Easy parking right in front on Liberty Lane West, staff always greets you with a smile, and PE@PF trainers help you set up machines.",
     likes: 19,
     verified: true
   }
@@ -363,34 +369,34 @@ export const VIDEO_CLIPS: VideoClip[] = [
   {
     id: "clip-1",
     duration: "0:16",
-    title: "Outdoor Yard & California Sunshine",
-    description: "Athletes lifting in the famous open-air compound with squat racks and heavy iron under Venice skies.",
-    views: "18.4K",
-    badge: "The Yard"
+    title: "30-Minute Express Workout Circuit",
+    description: "Watch how our timed red-light green-light circuit provides a complete strength and cardio workout in 30 minutes.",
+    views: "24.6K",
+    badge: "Express Circuit"
   },
   {
     id: "clip-2",
     duration: "0:08",
-    title: "Heavy Dumbbell Pit (Up to 300 lbs)",
-    description: "The world's most legendary free weight rows, from 5 lbs dumbbells to colossal 300 lbs custom bells.",
-    views: "42.1K",
-    badge: "Free Weights"
+    title: "PF Black Card Spa® HydroMassage",
+    description: "Experience the heated water massage beds and zero-gravity recovery loungers exclusive to Black Card members.",
+    views: "53.2K",
+    badge: "Black Card Spa"
   },
   {
     id: "clip-3",
     duration: "0:14",
-    title: "Arsenal & Vintage Leverage Floor",
-    description: "A tour of the primary selectorized machines, plate-loaded presses, and competition power racks.",
-    views: "12.7K",
-    badge: "Strength Room"
+    title: "Spacious Cardio & Strength Floor",
+    description: "Explore rows of treadmills, stair climbers, ellipticals, and easy-to-use pin-selectorized strength machines.",
+    views: "18.9K",
+    badge: "Gym Floor"
   },
   {
     id: "clip-4",
     duration: "0:08",
-    title: "GOLD'S 3D Body Scan Lab & Recovery",
-    description: "Rapid 35-second volumetric body composition scanning and executive locker room saunas.",
-    views: "9.3K",
-    badge: "Recovery & Tech"
+    title: "Spotless Showers, Lockers & Amenities",
+    description: "Take a peek at our clean, sanitized locker rooms, private shower stalls, and dressing vanities.",
+    views: "14.1K",
+    badge: "Clean Facilities"
   }
 ];
 
@@ -399,77 +405,77 @@ export const SOCIAL_POSTS: SocialPost[] = [
     id: "sp-1",
     date: "October 4, 2026",
     timeAgo: "1 day ago",
-    content: "Monday mornings hit different at 360 Hampton. Doors opened at 5:00 AM sharp and the energy on the outdoor yard has been electric all day. What are you training today?",
-    likes: 1240,
-    comments: 86,
-    tag: "VeniceMecca"
+    content: "Monday workout motivation at 4 Liberty Lane West! Whether you're doing 20 minutes on the treadmill or the 30-minute express circuit, you're crushing it today in the Judgement Free Zone®.",
+    likes: 1420,
+    comments: 64,
+    tag: "JudgementFreeZone"
   },
   {
     id: "sp-2",
     date: "October 2, 2026",
     timeAgo: "3 days ago",
-    content: "Fresh drop in the strength room: 4 new custom plate-loaded chest and back pieces calibrated for maximum hypertrophy. Stop by the desk to test them out.",
-    likes: 2108,
-    comments: 134,
-    tag: "EquipmentUpdate"
+    content: "Did you know PE@PF trainer-led sessions are 100% free with all memberships? Stop by the front desk in Hampton to sign up for your free personalized fitness plan this week!",
+    likes: 2415,
+    comments: 112,
+    tag: "FreeFitnessTraining"
   },
   {
     id: "sp-3",
     date: "September 29, 2026",
     timeAgo: "6 days ago",
-    content: "Planning your pilgrimage? Day passes are available at the front desk or book ahead online to skip the line. Restrooms, private showers, and full locker room amenities included.",
-    likes: 980,
-    comments: 45,
-    tag: "DayPass"
+    content: "Upgrade to the PF Black Card® this month to unlock unlimited HydroMassage®, Total Body Enhancement, and bring a workout partner every single visit!",
+    likes: 1890,
+    comments: 78,
+    tag: "PFBlackCard"
   }
 ];
 
 export const PASS_OPTIONS = [
   {
+    id: "classic-membership",
+    title: "Classic Membership",
+    price: 10,
+    period: "month (plus taxes/fees)",
+    badge: "Low-Cost Everyday Value",
+    description: "Everything you need to get moving in a clean, welcoming environment.",
+    features: [
+      "Unlimited access to your Hampton, NH home club",
+      "Free In-Club Fitness Training (PE@PF) with trainers",
+      "Free high-speed member Wi-Fi",
+      "Full access to massive cardio & strength machine floor",
+      "Spotless locker rooms & private shower stalls",
+      "Use of the PF App with digital workout tracking"
+    ]
+  },
+  {
+    id: "black-card",
+    title: "PF Black Card®",
+    price: 24.99,
+    period: "month (plus taxes/fees)",
+    badge: "Most Popular Nationwide",
+    description: "The ultimate fitness & recovery passport for clubs across the U.S.",
+    features: [
+      "Access to 2,500+ Planet Fitness clubs across the U.S.",
+      "Bring a guest anytime at no additional cost",
+      "Relax in HydroMassage® heated water massage beds",
+      "Total Body Enhancement red light therapy booths",
+      "Massage chairs & zero-gravity loungers",
+      "50% off select cold beverages & retail partner perks"
+    ]
+  },
+  {
     id: "day-pass",
-    title: "Venice Day Pass",
-    price: 50,
-    period: "single day entry",
-    badge: "Most Popular for Visitors",
-    description: "The iconic Venice pilgrimage. Complete full-day pass with no time limit.",
+    title: "Free 1-Day Trial Pass",
+    price: 0,
+    period: "single day guest pass",
+    badge: "Try The Judgement Free Zone",
+    description: "Experience our Hampton club first-hand before joining.",
     features: [
-      "Access to all indoor gym floors & weight rooms",
-      "Full access to the iconic Outdoor Training Yard",
-      "Dumbbells up to 300 lbs and calibrated plates",
-      "Executive locker rooms, showers & saunas",
-      "Cardio deck & stretching mezzanine",
-      "Free high-speed member Wi-Fi"
-    ]
-  },
-  {
-    id: "week-pass",
-    title: "7-Day Mecca Pass",
-    price: 150,
-    period: "consecutive 7 days",
-    badge: "Best Value for Travellers",
-    description: "Seven consecutive days of training at the world's most famous gym.",
-    features: [
-      "All Day Pass privileges for 7 continuous days",
-      "Complimentary GOLD'S 3D initial body scan",
-      "Access to all Group Exercise & Cycle classes",
-      "Locker room, showers, saunas & towel service",
-      "10% discount at the official Gold's Venice Pro Shop"
-    ]
-  },
-  {
-    id: "vip-membership",
-    title: "VIP Gold Membership",
-    price: 129,
-    period: "monthly recurring",
-    badge: "Resident & Dedicated Lifter",
-    description: "Unlimited 365-day access with elite coaching perks and digital tools.",
-    features: [
-      "Unlimited access 7 days a week",
-      "Monthly GOLD'S 3D progress scans & analytics",
-      "Full GOLD'S AMP digital audio training app subscription",
-      "Complimentary 60-min personal training onboarding session",
-      "Guest passes (2 per month included)",
-      "Priority equipment orientation"
+      "Full single-day access to all cardio & strength equipment",
+      "Tour of the facility and equipment demo",
+      "Locker room and private shower access",
+      "No obligation, pressure-free trial experience",
+      "Instant digital guest pass on your phone"
     ]
   }
 ];
